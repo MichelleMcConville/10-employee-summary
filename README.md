@@ -36,7 +36,7 @@ npm install -y, npm i inquirer
 
 ```node
 Type the following command to run program:
-node index.js
+node app.js
 ```
 
 ## Contributing 🤝
