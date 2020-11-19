@@ -22,7 +22,7 @@ const validateId = (input) => {
 };
 
 const validateEmail = (input) => {
-  if (/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(input) || input === "") {
+  if (/^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/.test(input) || input === "") {
     return true;
   } else {
     return "Please enter a valid email address!";
