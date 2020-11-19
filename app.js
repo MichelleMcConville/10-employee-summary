@@ -13,6 +13,14 @@ const { prompt } = require("inquirer");
 const team = [];
 let employee = [];
 
+const validateId = (input) => {
+  if (isNaN(input) || input === "" || input === "0") {
+    return "Please enter a valid number above Zero!";
+  } else {
+    return true;
+  }
+};
+
 const questions = {
   message: "Please select one of the following?",
   type: "list",
@@ -49,6 +57,7 @@ function start() {
       message: "Provide an ID number for the employee?",
       type: "input",
       name: "id",
+      validate: validateId,
     },
     {
       message: "What is the employee's email address?",
