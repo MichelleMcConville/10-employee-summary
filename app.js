@@ -74,4 +74,10 @@ function start() {
   });
 }
 
-
+function generateTeam() {
+  const html = render(team);
+  fs.writeFile(outputPath, html, (err) => {
+    if (err) throw err;
+    console.log("Employee summary successfully completed!");
+  });
+}
