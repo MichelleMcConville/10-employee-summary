@@ -90,3 +90,13 @@ function getManager() {
     start();
   });
 }
+
+
+function getEngineer() {
+  employee.push(engineer);
+  prompt(employee).then((response) => {
+    const engineer = new Engineer(response.name, response.id, response.email, response.github);
+    team.push(engineer);
+    start();
+  });
+}
