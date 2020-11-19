@@ -29,6 +29,14 @@ const validateEmail = (input) => {
   }
 };
 
+validateBlankEntry = (input) => {
+  if (input === "") {
+    return "Must provide valid information!";
+  } else {
+    return true;
+  }
+};
+
 const questions = {
   message: "Please select one of the following?",
   type: "list",
@@ -40,18 +48,21 @@ const manager = {
   message: "Please provide the manager's office number?",
   type: "input",
   name: "office",
+  validate: validateBlankEntry,
 };
 
 const engineer = {
   message: "Please enter the engineer's GitHub username?",
   type: "input",
   name: "github",
+  validate: validateBlankEntry,
 };
 
 const intern = {
   message: "Please enter the intern's school name?",
   type: "input",
   name: "school",
+  validate: validateBlankEntry,
 };
 
 function start() {
@@ -60,6 +71,7 @@ function start() {
       message: "Enter the employee's first & last name?",
       type: "input",
       name: "name",
+      validate: validateBlankEntry,
     },
     {
       message: "Provide an ID number for the employee?",
