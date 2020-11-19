@@ -81,3 +81,12 @@ function generateTeam() {
     console.log("Employee summary successfully completed!");
   });
 }
+
+function getManager() {
+  employee.push(manager);
+  prompt(employee).then((response) => {
+    const manager = new Manager(response.name, response.id, response.email, response.office);
+    team.push(manager);
+    start();
+  });
+}
