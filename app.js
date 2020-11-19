@@ -100,3 +100,12 @@ function getEngineer() {
     start();
   });
 }
+
+function getIntern() {
+  employee.push(intern);
+  prompt(employee).then((response) => {
+    const intern = new Intern(response.name, response.id, response.email, response.school);
+    team.push(intern);
+    start();
+  });
+}
