@@ -83,6 +83,7 @@ h1 {
 .list-group-item {
   background-color: azure;
   margin-bottom: .2rem;
+  border-bottom: 0;
 }
 
 .row {
