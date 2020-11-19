@@ -7,8 +7,10 @@ const fs = require("fs");
 
 const OUTPUT_DIR = path.resolve(__dirname, "output");
 const outputPath = path.join(OUTPUT_DIR, "team.html");
-
 const render = require("./lib/htmlRenderer");
+
+const team = [];
+let employee = [];
 
 const questions = {
   message: "Please select one of the following?",
@@ -53,7 +55,7 @@ function start() {
       name: "email",
     },
   ];
-  
+
   inquirer.prompt(questions).then((response) => {
     switch (response.role) {
       case "Add Manager":
@@ -71,4 +73,5 @@ function start() {
     }
   });
 }
+
 
