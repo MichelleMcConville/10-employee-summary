@@ -21,6 +21,14 @@ const validateId = (input) => {
   }
 };
 
+const validateEmail = (input) => {
+  if (/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(input) || input === "") {
+    return true;
+  } else {
+    return "Please enter a valid email address!";
+  }
+};
+
 const questions = {
   message: "Please select one of the following?",
   type: "list",
@@ -63,6 +71,7 @@ function start() {
       message: "What is the employee's email address?",
       type: "input",
       name: "email",
+      validate: validateEmail,
     },
   ];
 
