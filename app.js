@@ -8,6 +8,7 @@ const fs = require("fs");
 const OUTPUT_DIR = path.resolve(__dirname, "output");
 const outputPath = path.join(OUTPUT_DIR, "team.html");
 const render = require("./lib/htmlRenderer");
+const { prompt } = require("inquirer");
 
 const team = [];
 let employee = [];
@@ -90,7 +91,6 @@ function getManager() {
     start();
   });
 }
-
 
 function getEngineer() {
   employee.push(engineer);
