@@ -53,4 +53,22 @@ function start() {
       name: "email",
     },
   ];
+  
+  inquirer.prompt(questions).then((response) => {
+    switch (response.role) {
+      case "Add Manager":
+        getManager();
+        break;
+      case "Add Engineer":
+        getEngineer();
+        break;
+      case "Add Intern":
+        getIntern();
+        break;
+      case "Exit":
+        generateTeam();
+        break;
+    }
+  });
 }
+
