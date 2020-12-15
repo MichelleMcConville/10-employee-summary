@@ -1,5 +1,5 @@
 
-# [10-employee-summary](https://github.com/MichelleMcConville/10-employee-summary) 🔗
+# [10-employee-summary](https://github.com/MichelleMcConville/10-employee-summary)
 
 ![Badge](https://8nxhgwjcvhpi.runkit.sh)
 ![Badge](https://4m9gn8h87520.runkit.sh)
